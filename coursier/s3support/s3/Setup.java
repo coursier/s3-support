@@ -1,4 +1,3 @@
-//> using lib "com.amazonaws:aws-java-sdk-s3:1.12.492"
 //> using jvm "8"
 
 package coursier.s3support.s3;
@@ -36,6 +35,9 @@ public final class Setup {
    * it tries to open s3://... URLs.
    */
   public static void setup() {
+    // run Handler static initializer
+    new Handler();
+
     registerPackage();
     resetHandlers();
   }
