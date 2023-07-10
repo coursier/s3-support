@@ -9,7 +9,7 @@ Ensure the `io.get-coursier:s3-support:0.1.0` dependency (that is, [its JAR](htt
 the one of `com.amazonaws:aws-java-sdk-s3` and those of all its dependencies) is available at runtime, and is passed to the `java` process
 via the `-cp` option of `java`.
 
-Call `coursier.s3support.Setup.setup()` early on in your application, before attempting to open `s3://` or `s3n://` URLs with `java.net.URL` in any case.
+Call `coursier.s3support.s3.Setup.setup()` early on in your application, before attempting to open `s3://` or `s3n://` URLs with `java.net.URL` in any case.
 This allows `java.net.URL` to find the `s3://` and `s3n://` support that *s3-support* provides.
 
 Only tested on Java 8 for now.
